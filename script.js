@@ -1,13 +1,12 @@
 // function to get computer's play of rock, paper or scissors
 function getComputerChoice() {
     let randomNumber = Math.random();
-    let computerChoice;
     if (randomNumber < 1/3) {
-        return computerChoice = "rock";
+        return "rock";
     } else if (randomNumber > 2/3) {
-        return computerChoice = "paper";
+        return "paper";
     } else {
-        return computerChoice = "scissors";
+        return "scissors";
     }
 }
 
