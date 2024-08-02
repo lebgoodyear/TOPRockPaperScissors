@@ -21,5 +21,28 @@ function getHumanChoice () {
     return humanChoice
 }
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+let computerScore = 0;
+let humanScore = 0;
+
+// function to enable a round to be played
+function playRound(compterChoice, humanChoice) {
+    console.log("Computer: " + compterChoice);
+    console.log("You: " + humanChoice);
+    if (computerChoice === humanChoice) {
+        console.log("It's a draw!");
+    } else if ((compterChoice === "rock" && humanChoice === "paper") 
+               || (compterChoice === "paper" && humanChoice === "scissors") 
+               || (compterChoice === "scissors" && humanChoice === "rock")) {
+        console.log("You win!");
+        humanScore ++;
+    } else {
+        console.log("Computer wins :(");
+        computerScore ++;
+    }
+    console.log("Score is " + humanScore + ":" + computerScore);
+}
+
+let computerChoice = getComputerChoice();
+let humanChoice = getHumanChoice();
+
+console.log(playRound(computerChoice, humanChoice));
